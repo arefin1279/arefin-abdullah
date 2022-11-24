@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #23242a;
+}
+.box 
+{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before 
+{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent,blue,blue);
+    animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+.box::after 
+{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,red,red);
+    animation: animate 6s linear infinite;
+    
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate (0deg)
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+form 
+{
+	position: absolute;
+	inset: 2px;
+	background: #28292d;
+	padding: 50px 40px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+h2 
+{
+	color: gold;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+p 
+{
+    position: absolute;
+	left: 45px;
+	bottom: 0;
+	width: 100%;
+	height: 120px;
+	z-index: 9;
+	color: lightblue;
+}
+.img
+{
+    position: absolute;
+	left: 40px;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	z-index: 9;
+}
+.logo
+{
+    position: absolute;
+	left: 45px;
+	bottom: 0;
+	width: 100%;
+	height: 370px;
+	z-index: 1;
+}
+.link 
+{
+    position: absolute;
+	left: 80px;
+	bottom: 0;
+	width: 100%;
+	height: 75px;
+	z-index: 9;
+	text-color: red;
+	text-decoration: none;
+}
+.img2
+{
+    position: absolute;
+	left: 40px;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 9;
+}
+.phone
+{
+    position: absolute;
+	left: 80px;
+	bottom: 0;
+	width: 100%;
+	height: 45px;
+	z-index: 9;
+	text-decoration: none;
+}
